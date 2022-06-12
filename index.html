@@ -1,0 +1,46 @@
+<DOCTYPE  html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>iniciando meu primeiro jogo</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/jogodaforca.css">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+		
+		</head>
+	<body class="corpodojogo">
+		<header>
+		 <p id="titulo"></p>	
+		</header>
+		<main class="principal"> 
+			<canvas></canvas>
+			<form>
+				<button  class="botaoini"e  onclick="iniciarosrecusosdojogo()">
+				<p>iniciar o jogo</p>
+			</button> 
+			
+			<button class="botaoadi">
+				<p>adicione novas palavras ao jogo</p>
+			</button>
+
+			<button class="botaonovojogo">
+				<P class="novojogo"></P>
+			</button>
+
+			<button class="botaodesitir">
+				<p class="desistir"></p>
+			</button>
+			</form>
+			
+
+			
+		</main>
+       	<footer>             
+    		<p class="desenvolvedor">&copy; Construido e desenvolvido por josé leandro do nascimento</p>
+		</footer>
+	</body>	
+</html>
+
+<script src="java/carregamentoinicial.js"></script>
+<script src="java/desenharconteudos.js"></script>
+<script src="java/logicadojogo.js"></script>
