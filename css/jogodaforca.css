@@ -1,0 +1,97 @@
+.corpodojogo {
+	background: black;
+}
+
+.titulo {
+	text-align: center;
+	font-size: 27px;
+	color: #ffffff;
+}
+
+.tamanho {
+	background: transparent;
+	width: 600px;
+	height: 400;
+	position: absolute;
+	top: 80px;
+	left: 440px;
+	
+}
+
+
+
+.pincel {
+	background-color: #bb8511;
+}
+
+.criarcanvas {
+	
+	background-color: rgba(67, 73, 148, 0.493);
+}
+
+.botaoini {
+	position: absolute;
+	top: 200px;
+	right: 655px;
+	background: rgb(80, 99, 160);
+	color: white;
+}
+
+.botaoini p:active {
+	font-size: 14px;
+}
+
+.botaoadi {
+	position: absolute;
+	top: 250px;
+	right: 595px;
+	background: rgb(80, 99, 160);
+	color: white;
+}
+.botaonovojogo {
+	background: #483D8B;
+	font-size: 12px;
+	border: 10px;
+	border-radius: 15px;
+	background-color: writer;
+	color: #ffffff;
+	padding: 15px;
+    position: absolute;
+    top: 520px;
+    left: 450px;
+	margin: 14 1 1 1;
+    font-weight: bold;
+}
+
+.botaodesistir {
+	background: #483D8B;
+	font-size: 12px;
+	border: 10px;
+	border-radius: 15px;
+	background-color: writer;
+	color: #ffffff;
+	padding: 15px;
+    position: absolute;
+    top: 520px;
+    right: 310px;
+	margin: 14 1 1 1;
+    font-weight: bold;
+	color: #5a4724ea";
+}
+
+
+footer {
+	position: absolute;
+	width: 100%;
+	top: 640px;
+	text-align: center;
+	line-height: 180px;
+}
+
+.desenvolvedor {
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	color: rgb(121, 113, 99);
+}
+
+
