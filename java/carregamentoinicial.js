@@ -15,6 +15,9 @@ function iniciarosrecusosdojogo() {
         var nomedotitulo = "jogando um joginho";
         titulodojogo.textContent = nomedotitulo;
 
+        var imagem = document.querySelector(".imagem-forca");
+        imagem.style.visibility = "visible";
+
         var botaoini = document.querySelector(".botaoini");
         botaoini.style.display = "none";
         var botaoadi = document.querySelector(".botaoadi");
@@ -31,8 +34,9 @@ function iniciarosrecusosdojogo() {
          
          var iniciarosrecusosdojogo = colocarbotoesrestantes();
          var iniciarosrecusosdojogo = sorteiapalavras();
-       
+        var iniciarosrecusosdojogo = tela.onclick = dispara;
          var iniciarosrecusosdojogo = desenhalinhas();
+         
  }
 
  function colocarbotoesrestantes() {
