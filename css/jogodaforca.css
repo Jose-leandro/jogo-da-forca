@@ -1,25 +1,45 @@
 .corpodojogo {
-	background: black;
+	background: rgb(5, 5, 5);
+	color: #ffffff;
 }
 
 .titulo {
 	text-align: center;
 	font-size: 27px;
-	color: #ffffff;
+	
+}
+
+.imagem-forca {
+	position: absolute;	
+	top: 218px;
+	left: 440px;
+	visibility: hidden;
+	
 }
 
 .tamanho {
 	background: transparent;
-	width: 600px;
-	height: 400;
 	position: absolute;
 	top: 80px;
 	left: 440px;
+	background-color: #55ceff;
 	
 }
 
+.teclado {
+	
+	padding: 13px;
+}
 
+.segteclado {
+	color: #1b4657;
+	padding: 13px;
+}
 
+.terteclado {
+	color: #ffffff;
+	padding: 13px;
+}
 .pincel {
 	background-color: #bb8511;
 }
@@ -34,7 +54,7 @@
 	top: 200px;
 	right: 655px;
 	background: rgb(80, 99, 160);
-	color: white;
+	
 }
 
 .botaoini p:active {
