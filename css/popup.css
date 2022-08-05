@@ -1,0 +1,154 @@
+
+*{
+	box-sizing: border-box;	
+}
+
+.popup-wrapper {
+	background: rgba(0, 0, 0, .5);
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.popup {
+	background:  #483D8B;
+	border-radius: 20px;
+	color: #000000;
+	margin: 10% auto;
+	max-width: 300px;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.popup-close {
+	color: #000000;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.segpopup-wrapper {
+	background: rgba(0, 0, 0, .5);	
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.segpopup {
+	background:  #483D8B;
+	border-radius: 20px;
+	color: #000000;
+	max-width: 300px;
+	margin: 10% auto;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.segpopup-close {
+	color: #000000;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.terpopup-wrapper {
+	background: rgba(0, 0, 0, .5);	
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.terpopup {
+	background:  #483D8B;
+	border-radius: 20px;
+	color: #000000;
+	max-width: 300px;
+	margin: 10% auto;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.terpopup-close {
+	color: #000000;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.quapopup-wrapper {
+	background: rgba(0, 0, 0, .5);	
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.quapopup {
+	background: #483D8B;
+	border-radius: 20px;
+	color: #000000;
+	max-width: 300px;
+	margin: 10% auto;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.quapopup-close {
+	color: #000000;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.quinpopup-wrapper {
+	background: rgba(0, 0, 0, .5);	
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.quinpopup {
+	background:  #483D8B;
+	border-radius: 20px;
+	color: #000000;
+	max-width: 300px;
+	margin: 10% auto;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.quinpopup-close {
+	color: #000000;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
