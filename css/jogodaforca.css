@@ -1,117 +1,241 @@
-.corpodojogo {
-	background: rgb(5, 5, 5);
+.contener-all {
+	background: url("file:///C:/Users/leand/jogodaforca/imagem/imagempaisagem.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
 	color: #ffffff;
 }
 
 .titulo {
-	text-align: center;
+	color: #483D8B;
 	font-size: 27px;
-	
-}
-
-.imagem-forca {
-	position: absolute;	
-	top: 218px;
-	left: 440px;
+	text-align: center;
 	visibility: hidden;
-	
 }
 
-.tamanho {
+.contener-imagem-canvas {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+#canvas {
+	background: url("../imagem/forca.png") no-repeat;
+	background-position: bottom;
+	visibility: hidden;
+}
+
+.tela {
 	background: transparent;
-	position: absolute;
-	top: 80px;
-	left: 440px;
-	background-color: #55ceff;
-	
 }
 
-.teclado {
-	
-	padding: 13px;
+.contener-iniciar-adicionar {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3e;
+	text-align: center;
 }
 
-.segteclado {
-	color: #1b4657;
-	padding: 13px;
-}
-
-.terteclado {
-	color: #ffffff;
-	padding: 13px;
-}
-.pincel {
-	background-color: #bb8511;
-}
-
-.criarcanvas {
-	
-	background-color: rgba(67, 73, 148, 0.493);
-}
-
-.botaoini {
-	position: absolute;
-	top: 200px;
-	right: 655px;
+.btn-iniciar {
 	background: rgb(80, 99, 160);
-	
+	border-radius: 4px;
+	font-size: 13px;
+	left: 50%;
+	position: absolute;
+	top: 160px;
+	width: 10%;
 }
 
-.botaoini p:active {
+.btn-iniciar:hover {
 	font-size: 14px;
 }
 
-.botaoadi {
+.btn-adicionar {
+	background: rgb(80, 99, 160);
+	border-radius: 4px;
+	color: #000000;
+    left: 50%;
+	margin-top: 20px;
+    position: absolute;
+    top: 180px;
+    width: 10%;
+}
+
+.btn-adicionar:hover {
+	font-size: 14px;
+}
+
+.contener-novo-desitir {
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 4em;
+}
+
+.btn-novojogo {
+	background: #483D8B;
+	border: 10px;
+	background-color: writer;
+	border-radius: 15px;
+	color: #ffffff;
+	font-size: 12px;
+    font-weight: bold;
+	margin: 14 1 1 1;
+	padding: 15px;
+	visibility: hidden;
+}
+
+.btn-desistir {
+	border: 10px;
+	background: #483D8B;
+	background-color: "writer";
+	border-radius: 15px;
+	color: #ffffff;
+	font-size: 12px;
+    font-weight: bold;
+	margin: 14px 1 1 1;
+	padding: 15px;
+	visibility: hidden;
+}
+
+.adicionar-letras-incorretas {
+	background: transparent;
+	color: #1b1717;
+	position: absolute;
+	right: 100px;
+	top: 200px;
+}
+
+.adicionar-letras-incorreta {
+	font-family: 'Advent Pro', sans-serif;
+	font-family: 'Arima', cursive;
+	font-family: 'Caveat', cursive;
+	font-size: 2em;
+	margin-right: 1em;
+}
+
+form {
+	height: 8em;
+}
+
+.contener-adicionar {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 0 2em 0;
+	width: 100%;
+}
+
+.contener-textarea {
+	height: 6em;
+}
+
+.textare {
+	left: 500px;
 	position: absolute;
 	top: 250px;
-	right: 595px;
+	visibility: hidden;
+}
+
+.contener-bnts-voltar-adicionar {
+	height: 100px;
+	width: 390px;
+}
+
+.btn-voltar {
 	background: rgb(80, 99, 160);
-	color: white;
-}
-.botaonovojogo {
-	background: #483D8B;
-	font-size: 12px;
-	border: 10px;
-	border-radius: 15px;
-	background-color: writer;
-	color: #ffffff;
-	padding: 15px;
-    position: absolute;
-    top: 520px;
-    left: 450px;
-	margin: 14 1 1 1;
-    font-weight: bold;
-}
-
-.botaodesistir {
-	background: #483D8B;
-	font-size: 12px;
-	border: 10px;
-	border-radius: 15px;
-	background-color: writer;
-	color: #ffffff;
-	padding: 15px;
-    position: absolute;
-    top: 520px;
-    right: 310px;
-	margin: 14 1 1 1;
-    font-weight: bold;
-	color: #5a4724ea";
-}
-
-
-footer {
+	border-radius: 4px;
+	left: 500px;
+	margin-right: 2em;
+	margin-top: 20px;
 	position: absolute;
+	top: 300px;
+	visibility: hidden;
+}
+
+.btn-adicionarpalavra-ao-jogo {
+	border-radius: 4px;
+	background: rgb(80, 99, 160);
+	margin-top: 20px;
+	position: absolute;
+	right: 455px;
+	top: 300px;
+	visibility: hidden;
+}
+
+.contener-direitos {
+	display: flex;
+	height: 140px;
+	justify-content: end;
+	margin-right: 2em;
 	width: 100%;
-	top: 640px;
+}
+
+.direitos {
+	background: linear-gradient(40deg,#12191f 40%, #4e2248);
+	border-radius: 10px;
+	margin-bottom: 2em;
+	visibility: hidden;
+}
+
+.informacao-direitos {
+	color: #aca4a4;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 10px;
+	padding: 0 5px;
 	text-align: center;
-	line-height: 180px;
+}
+
+.clique-aqui {
+	color: #476080;
+	text-decoration: none;
+}
+
+.contener-simbolo-direitos {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.material-symbols-outlined {
+	cursor: pointer;
+	color: #000000;
+	font-size: 10px;
+	margin-right: 20px;
+}
+
+.rodape {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 100%;
+	justify-content: flex-end;
+	text-align: center;	
+	width: 100%;
 }
 
 .desenvolvedor {
-	display: inline-block;
+	color: #000000;
 	font-family: 'Oswald', sans-serif;
-	color: rgb(121, 113, 99);
 }
+
+.contener-git{
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+}
+
+.github {
+	height: 20px;
+	margin-right: 0.20rem;
+	width: 20px;
+}
+
+.link-git {
+	text-decoration: none;
+}
+
 
 
