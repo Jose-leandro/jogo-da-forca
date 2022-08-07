@@ -1,7 +1,7 @@
 
 @media screen and  (max-width: 480px) {
     .contener-all {
-        background: url("file:///C:/Users/leand/jogodaforca/imagem/imagempaisagem.png");
+        background: url("../imagem/imagempaisagem.png");
         color: #ffffff;
     }
     
@@ -118,7 +118,7 @@
 
 @media screen and  (max-width: 768px) {
     .contener-all {
-        background: url("file:///C:/Users/leand/jogodaforca/imagem/imagempaisagem.png");
+        background: url("../imagem/imagempaisagem.png");
         color: #ffffff;
     }
 
@@ -172,7 +172,7 @@
 
 @media screen and (max-width: 1024px) {
     .contener-all {
-        background: url("file:///C:/Users/leand/jogodaforca/imagem/imagempaisagem.png");
+        background: url("../imagem/imagempaisagem.png");
         background-repeat: no-repeat;
         color: #ffffff;
     }
