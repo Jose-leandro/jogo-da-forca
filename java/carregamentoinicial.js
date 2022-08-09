@@ -10,6 +10,11 @@
       event.preventDefault();
     });
 
+    var Btndicionarpalavrasnovas = document.querySelector(".btn-adicionarpalavra-ao-jogo");
+    Btndicionarpalavrasnovas.addEventListener("click", function(event){
+      event.preventDefault();
+    });
+
     var BtnIniciarOJogo = document.querySelector(".btn-iniciar");
     BtnIniciarOJogo.addEventListener("click", function(event){
         event.preventDefault();
@@ -50,9 +55,6 @@ function CarregarOsRecusosDoJogo() {
   
   var MostarBtnDesistir = document.querySelector(".btn-desistir");
   MostarBtnDesistir.style.visibility = "visible";          
-   
-  var Tela = document.querySelector("canvas");
-  Tela.classList.add("tela"); 
 
   var Canvas = document.querySelector("#canvas");
   Canvas.style.visibility = "visible";
@@ -60,7 +62,9 @@ function CarregarOsRecusosDoJogo() {
   DesenhaTracos()
   DetectarLetrasQuandoPressionada()
  }
-
+  
+ var Tela = document.querySelector("canvas");
+ Tela.classList.add("tela");
 
  //deixar visivel quando for clicado sobre o simbolo de direitos autorais
  function DireitosAutorais() {

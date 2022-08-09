@@ -5,6 +5,12 @@
 	color: #ffffff;
 }
 
+.contener-cabecalho {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
 .titulo {
 	color: #483D8B;
 	font-size: 27px;
@@ -26,6 +32,23 @@
 
 .tela {
 	background: transparent;
+}
+
+.secao-jogar-para-moblie {
+	display: none;
+}
+
+.campo-adicionar-letras {
+	border: transparent;
+	border-radius: 5px;
+	font-size: 10px;
+	width: 40%;
+	height: 5%;
+}
+
+.campo-adicionar-letras::placeholder {
+	font-size: 8px;
+	text-align: center;
 }
 
 .contener-iniciar-adicionar {

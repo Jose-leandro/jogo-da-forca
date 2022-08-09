@@ -3,8 +3,22 @@
     .contener-all {
         background: url("../imagem/imagempaisagem.png");
         color: #ffffff;
+        width: 375px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contener-main {
+        width: 100%;
     }
     
+    .contener-cabecalho {
+        align-items: center;
+        display: flex;
+        width: 100%;
+    }
+
     .titulo {
         margin: 14px 0 0 0;
         text-align: center;
@@ -13,19 +27,37 @@
     .contener-imagem-canvas {
         align-items: center;
         display: flex;
-        height: 250px; 
         justify-content: center;
     } 
 
     .tela {
-        height: 200px;
-        width: 300px;
+        background: transparent;
+        width: 80%;
+	    height: 80%;
     }
-  
+
     #canvas {
         background: url("../imagem/forca.png") no-repeat;
         background-position: bottom;
         background-size: 61%;
+    }
+
+    .secao-jogar-para-moblie {
+        height: 5em;
+        display: block;
+    }
+
+    .campo-adicionar-letras  {
+        position: absolute;
+        top: 60%;
+        left: 30%;
+    }
+
+    .contener-iniciar-adicionar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .btn-iniciar  {
@@ -36,10 +68,6 @@
         width: 100px;
     }
 
-    .btn-iniciar:hover {
-        font-size: 11px;
-    }
-
     .btn-adicionar  {
         font-size: 10px;
         left: 43%;
@@ -48,23 +76,19 @@
         width: 100px;
     }
 
-    .btn-adicionar:hover {
-        font-size: 11px;
-    }
-
     .btn-novojogo {
         font-size: 10px;
         margin-right: 4em;
         position: absolute;
         right: 20px;
-        top: 390px;
+        top: 300px;
     }
 
     .btn-desistir {
         font-size: 10px;
         left: 60px;
         position: absolute;
-        top: 390px;
+        top: 300px;
     }
 
     .adicionar-letras-incorretas {
@@ -74,20 +98,11 @@
         top: 20%;
     }
 
-    .terpopup {
-        border-radius: 5px;
-        font-size: small;
-        height: 15%;
-        width: 50%;
-    }
-
     .textare {
         font-size: 10px;
-        left: 4%;
-        margin-left: 60px;
         position: absolute;
         top: 50%;
-        width: 250px;
+        width: 200px;
     }
 
     .contener-bnts-voltar-adicionar { 
@@ -96,7 +111,7 @@
 
     .btn-voltar {
         font-size: 10px;
-        left: 70px;
+        left: 50%;
         position: absolute;
         top: 362px;
         visibility: hidden;
@@ -105,8 +120,9 @@
     .btn-adicionarpalavra-ao-jogo  {
         font-size: 10px;
         position: absolute;
-        right: 50px;
+        right: 50%;
         top: 359px;
+        width: 10%;
     }
 
     .direitos {
@@ -121,8 +137,7 @@
         background: url("../imagem/imagempaisagem.png");
         color: #ffffff;
     }
-
-        
+ 
     .btn-iniciar {
         left: 50%;
         position: absolute;
@@ -162,7 +177,7 @@
 
     .btn-adicionarpalavra-ao-jogo {
        position: absolute;
-       right: 24%;
+        
     }
 
     .btn-adicionarpalavra-ao-jogo:hover {
@@ -182,11 +197,19 @@
        position: absolute;
        top: 50%;
     }
+    
+    .btn-iniciar:hover {
+        font-size: 11px;
+    }
 
     .btn-adicionar {
         left: 48%;
         position: absolute;
         top: 57%;
+    }
+
+    .btn-adicionar:hover {
+        font-size: 11px;
     }
 
     .textare {
@@ -201,9 +224,9 @@
     }
 
     .btn-adicionarpalavra-ao-jogo {
-        left: 60%;
+        left: 55%;
         position: absolute;
-        width: 100px;
+        width: 60px;
     }
 
 }

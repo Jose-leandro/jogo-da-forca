@@ -238,7 +238,7 @@ function VerificarSerLetrasOuNumero(){
   function AdicionarNovaspalavras() {
     var Textarea = document.querySelector(".textare");
     Textarea = Textarea.value;
-    armazenapalavras.push(Textarea);
+    ContenhePalavrasSorteada.push(Textarea);
   }
   
   //popup de adicionado com sucesso, a palavra nova

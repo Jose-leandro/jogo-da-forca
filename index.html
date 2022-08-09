@@ -13,10 +13,10 @@
 		<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Arima:wght@100&family=Caveat&display=swap" rel="stylesheet">
 	</head>
 	<body class="contener-all">
-		<header>
+		<header class="contener-cabecalho">
 		 <p class="titulo">Jogando um joguinho</p>	
 		</header>
-		<main> 
+		<main class="contener-main"> 
 			<section>
 				<div class="contener-imagem-canvas">
 					<canvas width="600px" height="400px" id="canvas"></canvas>
@@ -34,13 +34,18 @@
 					<button class="btn-desistir" onclick="BtnDesistir()">Desistir</button>
 				</div>
 			</section>
+			<section class="secao-jogar-para-moblie">
+				<div>
+					<input class="campo-adicionar-letras" placeholder="Digite uma letra aqui">
+				</div>
+			</section>
 			<section>
 				<div class="adicionar-letras-incorretas"></div>
 			</section>
 			<section>
 				<div class="popup-wrapper">
 					<div class="popup">
-						<div class="popup-close">x</div>
+						<div class="popup-close">X</div>
 						<div class="popup-content">
 							<h2> Você perdeu!</h2>
 							<p> você nao consigui acerta a plavra</p>
@@ -50,7 +55,7 @@
 				</div>
 				<div class="segpopup-wrapper">
 					<div class="segpopup">
-						<div class="segpopup-close">x</div>
+						<div class="segpopup-close">X</div>
 						<div class="segpopup-content">
 							<h3>Você ganhou!</h3>
 							<p>parabens voce acertou a palavra</p>
@@ -60,7 +65,7 @@
 				</div>
 				<div class="terpopup-wrapper">
 					<div class="terpopup">
-						<div class="terpopup-close">x</div>
+						<div class="terpopup-close">X</div>
 						<div class="terpopup-content">
 							<h4> Fator de derrota!</h4><br>
 							<p> dessitencia do jogador</p>
@@ -71,9 +76,9 @@
 				</div>
 				<div class="quapopup-wrapper">
 					<div class="quapopup">
-						<div class="quapopup-close">x</div>
+						<div class="quapopup-close">X</div>
 						<div class="quapopup-content">
-							<h4> Palavra adicionada</h4><br>
+							<h4>Palavra adicionada</h4>
 							<a class="qualink"></a>
 						</div>
 					</div>
@@ -81,7 +86,7 @@
 			</div>
 			<div class="quinpopup-wrapper">
 				<div class="quinpopup">
-					<div class="quinpopup-close">x</div>
+					<div class="quinpopup-close">X</div>
 					<div class="quinpopup-content">
 						<h5>Números e Caracteres especiais</h5><br>
 						<p>Não são permitidos</p>
