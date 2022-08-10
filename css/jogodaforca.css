@@ -35,15 +35,16 @@
 }
 
 .secao-jogar-para-moblie {
-	display: none;
+	visibility: hidden;
+	height: 8em;
 }
 
 .campo-adicionar-letras {
 	border: transparent;
 	border-radius: 5px;
 	font-size: 10px;
-	width: 40%;
-	height: 5%;
+	width: 60%;
+	height: 8%;
 }
 
 .campo-adicionar-letras::placeholder {

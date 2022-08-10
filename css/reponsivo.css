@@ -42,15 +42,10 @@
         background-size: 61%;
     }
 
-    .secao-jogar-para-moblie {
-        height: 5em;
-        display: block;
-    }
-
     .campo-adicionar-letras  {
         position: absolute;
-        top: 60%;
-        left: 30%;
+        top: 70%;
+        left: calc(100% - 80%);
     }
 
     .contener-iniciar-adicionar {

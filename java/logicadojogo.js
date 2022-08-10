@@ -80,24 +80,32 @@ function VocePerdeu(){
   }   
   });  
  }
+
+ function comoJogarNoMoblie() {
+    var inputParaMoblie = document.querySelector(".campo-adicionar-letras");
+    inputParaMoblie = inputParaMoblie.value;
+    return inputParaMoblie;
+ }
+
+ DetectarLetrasQuandoPressionada(comoJogarNoMoblie());
  
  //tem como função deterctar tecla, transformar para string, ser conter na palavra selecionada vai ser preenchida , ser não conter vai ser adiconar como letras erradas
- function DetectarLetrasQuandoPressionada() {
+ function DetectarLetrasQuandoPressionada(letrasParaValidarDoMoblie) {
   document.addEventListener("keypress", function(event){
     var NumeroDaTecla = event.keyCode;
     var NumeroDaTeclaTransformada = String.fromCharCode(NumeroDaTecla);
     NumeroDaTeclaTransformada.toUpperCase();
-    if(!ValidacaoDeLetrasCorretas(NumeroDaTeclaTransformada)){
-      if(palavrasecreta.includes(NumeroDaTeclaTransformada)){
-        AdicionaraLetraCorreta(palavracorreta.indexOf(NumeroDaTeclaTransformada))
+    if(!ValidacaoDeLetrasCorretas(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie)){
+      if(palavrasecreta.includes(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie)){
+        AdicionaraLetraCorreta(palavracorreta.indexOf(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie))
         for(let i = 0; i < palavrasecreta.length; i++){
               
-          if(palavrasecreta[i] == NumeroDaTeclaTransformada){
+          if(palavrasecreta[i] == NumeroDaTeclaTransformada, letrasParaValidarDoMoblie){
             PreencherLetrasPressionadas(i)                     
           }  
         }
       }else{
-        SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(NumeroDaTeclaTransformada));
+        SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie));
   
         var OndevaiSerAdicionadaoAsLetrasErradas = document.querySelector(".adicionar-letras-incorretas");
         var TagParagrafor =  document.createElement("p");
@@ -106,6 +114,7 @@ function VocePerdeu(){
         OndevaiSerAdicionadaoAsLetrasErradas.appendChild(TagParagrafor);
                                   
         TagParagrafor.textContent = NumeroDaTeclaTransformada; 
+        TagParagrafor.textContent = letrasParaValidarDoMoblie;
       } 
     }
   });

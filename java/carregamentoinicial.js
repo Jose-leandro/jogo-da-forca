@@ -58,6 +58,9 @@ function CarregarOsRecusosDoJogo() {
 
   var Canvas = document.querySelector("#canvas");
   Canvas.style.visibility = "visible";
+
+  var inputParaMoblie = document.querySelector(".secao-jogar-para-moblie");
+  inputParaMoblie.style.visibility = "visible";
      
   DesenhaTracos()
   DetectarLetrasQuandoPressionada()
