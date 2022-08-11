@@ -82,9 +82,13 @@ function VocePerdeu(){
  }
 
  function comoJogarNoMoblie() {
-    var inputParaMoblie = document.querySelector(".campo-adicionar-letras");
-    inputParaMoblie = inputParaMoblie.value;
-    return inputParaMoblie;
+      var btnVerificarLetras = document.querySelector(".btn-verificar-letra");
+      btnVerificarLetras.addEventListener("click", function() {
+        
+        var inputParaMoblie = document.querySelector(".campo-adicionar-letras");
+        inputParaMoblie = inputParaMoblie.value;
+        return inputParaMoblie;
+      });
  }
 
  DetectarLetrasQuandoPressionada(comoJogarNoMoblie());
@@ -92,6 +96,7 @@ function VocePerdeu(){
  //tem como função deterctar tecla, transformar para string, ser conter na palavra selecionada vai ser preenchida , ser não conter vai ser adiconar como letras erradas
  function DetectarLetrasQuandoPressionada(letrasParaValidarDoMoblie) {
   document.addEventListener("keypress", function(event){
+    const entrekeyCode = 13;
     var NumeroDaTecla = event.keyCode;
     var NumeroDaTeclaTransformada = String.fromCharCode(NumeroDaTecla);
     NumeroDaTeclaTransformada.toUpperCase();
@@ -105,16 +110,20 @@ function VocePerdeu(){
           }  
         }
       }else{
-        SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie));
+        if(NumeroDaTecla == entrekeyCode) {
+          return;
+        }else {
+          SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie));
   
-        var OndevaiSerAdicionadaoAsLetrasErradas = document.querySelector(".adicionar-letras-incorretas");
-        var TagParagrafor =  document.createElement("p");
-        TagParagrafor.classList.add("adicionar-letras-incorreta");
-              
-        OndevaiSerAdicionadaoAsLetrasErradas.appendChild(TagParagrafor);
-                                  
-        TagParagrafor.textContent = NumeroDaTeclaTransformada; 
-        TagParagrafor.textContent = letrasParaValidarDoMoblie;
+          var OndevaiSerAdicionadaoAsLetrasErradas = document.querySelector(".adicionar-letras-incorretas");
+          var TagParagrafor =  document.createElement("p");
+          TagParagrafor.classList.add("adicionar-letras-incorreta");
+                
+          OndevaiSerAdicionadaoAsLetrasErradas.appendChild(TagParagrafor);
+                                    
+          TagParagrafor.textContent = NumeroDaTeclaTransformada; 
+          TagParagrafor.textContent = letrasParaValidarDoMoblie;
+        }
       } 
     }
   });
@@ -153,37 +162,43 @@ function VerificarSerLetrasOuNumero(){
     var seti = 7;
     var oito = 8;
     var none = 9;
-  
-    if(NumeroDaTeclaTransformada == zero){
-      PopupNumeros();
+    var entrekeyCode = 13;
+
+    if(entrekeyCode  == NumeroDaTecla) {
+      return;
+    }else {
+        
+      if(NumeroDaTeclaTransformada == zero){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == um){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == dois){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == tres){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == quarto){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == cinco){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == seis){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == seti){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == oito){
+        PopupNumeros();
+      }
+      if(NumeroDaTeclaTransformada == none){
+        PopupNumeros();
+      }  
     }
-    if(NumeroDaTeclaTransformada == um){
-      PopupNumeros();
-    }
-    if(NumeroDaTeclaTransformada == dois){
-      PopupNumeros();
-    }
-    if(NumeroDaTeclaTransformada == tres){
-      PopupNumeros();
-    }
-    if(NumeroDaTeclaTransformada == quarto){
-      PopupNumeros();
-    }
-    if(NumeroDaTeclaTransformada == cinco){
-      PopupNumeros();
-    }
-    if(NumeroDaTeclaTransformada == seis){
-      PopupNumeros();
-    }
-    if(NumeroDaTeclaTransformada == seti){
-      PopupNumeros();
-    }
-    if(NumeroDaTeclaTransformada == oito){
-      PopupNumeros();
-    }
-    if(NumeroDaTeclaTransformada == none){
-      PopupNumeros();
-    }  
     return false; 
    });   
   }

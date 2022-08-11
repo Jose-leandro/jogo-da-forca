@@ -52,6 +52,19 @@
 	text-align: center;
 }
 
+.btn-verificar-letra {
+	background: #483D8B;
+	border: 10px;
+	border-radius: 15px;
+	color: #ffffff;
+	font-size: 10px;
+    font-weight: bold;
+	left: 50%;
+	padding: 15px;
+	position: absolute;
+	top: 85%;
+}
+
 .contener-iniciar-adicionar {
 	display: flex;
 	flex-direction: column;
@@ -60,13 +73,16 @@
 }
 
 .btn-iniciar {
-	background: rgb(80, 99, 160);
-	border-radius: 4px;
+	background: #483D8B;
+	border: 10px;
+	border-radius: 15px;
+	color: #ffffff;
 	font-size: 13px;
+	font-weight: bold;
 	left: 50%;
 	position: absolute;
 	top: 160px;
-	width: 10%;
+	padding: 15px;
 }
 
 .btn-iniciar:hover {
@@ -74,14 +90,16 @@
 }
 
 .btn-adicionar {
-	background: rgb(80, 99, 160);
-	border-radius: 4px;
-	color: #000000;
+	background: #483D8B;
+	border: 10px;
+	border-radius: 15px;
+	color: #ffffff;
+	font-weight: bold;
     left: 50%;
 	margin-top: 20px;
     position: absolute;
     top: 180px;
-    width: 10%;
+    padding: 15px;
 }
 
 .btn-adicionar:hover {
@@ -98,7 +116,6 @@
 .btn-novojogo {
 	background: #483D8B;
 	border: 10px;
-	background-color: writer;
 	border-radius: 15px;
 	color: #ffffff;
 	font-size: 12px;
@@ -111,7 +128,6 @@
 .btn-desistir {
 	border: 10px;
 	background: #483D8B;
-	background-color: "writer";
 	border-radius: 15px;
 	color: #ffffff;
 	font-size: 12px;
@@ -167,20 +183,28 @@ form {
 }
 
 .btn-voltar {
-	background: rgb(80, 99, 160);
-	border-radius: 4px;
+	background: #483D8B;
+	border: 10px;
+	border-radius: 15px;
+	color: #ffffff;
+	font-weight: bold;
 	left: 500px;
 	margin-right: 2em;
 	margin-top: 20px;
 	position: absolute;
 	top: 300px;
 	visibility: hidden;
+	padding: 15px;
 }
 
 .btn-adicionarpalavra-ao-jogo {
-	border-radius: 4px;
-	background: rgb(80, 99, 160);
+	background: #483D8B;
+	border: 10px;
+	border-radius: 15px;
+	color: #ffffff;
+	font-weight: bold;
 	margin-top: 20px;
+	padding: 15px;
 	position: absolute;
 	right: 455px;
 	top: 300px;
