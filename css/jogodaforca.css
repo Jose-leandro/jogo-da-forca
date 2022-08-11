@@ -45,6 +45,7 @@
 	font-size: 10px;
 	width: 60%;
 	height: 8%;
+	visibility: hidden;
 }
 
 .campo-adicionar-letras::placeholder {
@@ -63,6 +64,7 @@
 	padding: 15px;
 	position: absolute;
 	top: 85%;
+	visibility: hidden;
 }
 
 .contener-iniciar-adicionar {
@@ -98,7 +100,8 @@
     left: 50%;
 	margin-top: 20px;
     position: absolute;
-    top: 180px;
+    top: 200px;
+	left: 47%;
     padding: 15px;
 }
 

@@ -61,9 +61,15 @@ function CarregarOsRecusosDoJogo() {
 
   var inputParaMoblie = document.querySelector(".secao-jogar-para-moblie");
   inputParaMoblie.style.visibility = "visible";
+
+  var btnVerificarLetras = document.querySelector(".btn-verificar-letra");
+  btnVerificarLetras.style.visibility = "visible";
+
+  var campoAdicionarLetras = document.querySelector(".campo-adicionar-letras");
+  campoAdicionarLetras.style.visibility = "visible";
      
-  DesenhaTracos()
-  DetectarLetrasQuandoPressionada()
+  DesenhaTracos();
+  DetectarLetrasQuandoPressionada();
  }
   
  var Tela = document.querySelector("canvas");

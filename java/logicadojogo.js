@@ -81,31 +81,20 @@ function VocePerdeu(){
   });  
  }
 
- function comoJogarNoMoblie() {
-      var btnVerificarLetras = document.querySelector(".btn-verificar-letra");
-      btnVerificarLetras.addEventListener("click", function() {
-        
-        var inputParaMoblie = document.querySelector(".campo-adicionar-letras");
-        inputParaMoblie = inputParaMoblie.value;
-        return inputParaMoblie;
-      });
- }
-
- DetectarLetrasQuandoPressionada(comoJogarNoMoblie());
  
  //tem como função deterctar tecla, transformar para string, ser conter na palavra selecionada vai ser preenchida , ser não conter vai ser adiconar como letras erradas
- function DetectarLetrasQuandoPressionada(letrasParaValidarDoMoblie) {
+ function DetectarLetrasQuandoPressionada() {
   document.addEventListener("keypress", function(event){
     const entrekeyCode = 13;
     var NumeroDaTecla = event.keyCode;
     var NumeroDaTeclaTransformada = String.fromCharCode(NumeroDaTecla);
     NumeroDaTeclaTransformada.toUpperCase();
-    if(!ValidacaoDeLetrasCorretas(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie)){
-      if(palavrasecreta.includes(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie)){
-        AdicionaraLetraCorreta(palavracorreta.indexOf(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie))
+    if(!ValidacaoDeLetrasCorretas(NumeroDaTeclaTransformada)){
+      if(palavrasecreta.includes(NumeroDaTeclaTransformada)){
+        AdicionaraLetraCorreta(palavracorreta.indexOf(NumeroDaTeclaTransformada))
         for(let i = 0; i < palavrasecreta.length; i++){
               
-          if(palavrasecreta[i] == NumeroDaTeclaTransformada, letrasParaValidarDoMoblie){
+          if(palavrasecreta[i] == NumeroDaTeclaTransformada){
             PreencherLetrasPressionadas(i)                     
           }  
         }
@@ -113,7 +102,7 @@ function VocePerdeu(){
         if(NumeroDaTecla == entrekeyCode) {
           return;
         }else {
-          SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(NumeroDaTeclaTransformada, letrasParaValidarDoMoblie));
+          SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(NumeroDaTeclaTransformada));
   
           var OndevaiSerAdicionadaoAsLetrasErradas = document.querySelector(".adicionar-letras-incorretas");
           var TagParagrafor =  document.createElement("p");
@@ -122,12 +111,52 @@ function VocePerdeu(){
           OndevaiSerAdicionadaoAsLetrasErradas.appendChild(TagParagrafor);
                                     
           TagParagrafor.textContent = NumeroDaTeclaTransformada; 
-          TagParagrafor.textContent = letrasParaValidarDoMoblie;
         }
       } 
     }
   });
 }
+
+// agora a lógica para dispositivos com tela sensiveis ao toque para poder jogar
+function comoJogarNoMoblie() {
+        
+  var inputParaMoblie = document.querySelector(".campo-adicionar-letras");
+  inputParaMoblie = inputParaMoblie.value;
+  inputParaMoblie = inputParaMoblie.toUpperCase();
+  console.log(inputParaMoblie);
+        
+  verificarLetraParaMoblie(inputParaMoblie);
+ }
+
+ 
+ //tem como função deterctar tecla, transformar para string, ser conter na palavra selecionada vai ser preenchida , ser não conter vai ser adiconar como letras erradas
+ function verificarLetraParaMoblie(letraParaVerificar) {
+  
+    if(!ValidacaoDeLetrasCorretas(letraParaVerificar)){
+      if(palavrasecreta.includes(letraParaVerificar)){
+        AdicionaraLetraCorreta(palavracorreta.indexOf(letraParaVerificar))
+        for(let i = 0; i < palavrasecreta.length; i++){
+              
+          if(palavrasecreta[i] == letraParaVerificar){
+            PreencherLetrasPressionadas(i)                     
+          }  
+        }
+      }else{
+    
+          SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(letraParaVerificar));
+  
+          var OndevaiSerAdicionadaoAsLetrasErradas = document.querySelector(".adicionar-letras-incorretas");
+          var TagParagrafor =  document.createElement("p");
+          TagParagrafor.classList.add("adicionar-letras-incorreta");
+                
+          OndevaiSerAdicionadaoAsLetrasErradas.appendChild(TagParagrafor);
+                                    
+          TagParagrafor.textContent = letraParaVerificar; 
+      } 
+    }
+}
+
+
 
 function PopupNumeros() {
   var QuintoPopup = document.querySelector(".quinpopup-wrapper");
