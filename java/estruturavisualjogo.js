@@ -29,8 +29,9 @@ function DesenhaTracos() {
   var eixo = 450/palavrasecreta.length;
   for( let i = 0; i < palavrasecreta.length; i++){
     pincel.strokeStyle = "#000000";
+    pincel.strokeRect = "110px";
     pincel.moveTo(134 +(eixo*i), 120);
-    pincel.lineTo(145 + (eixo*i), 120);
+    pincel.lineTo(158 + (eixo*i), 120);
     
   } 
   pincel.stroke();

@@ -42,10 +42,19 @@
         background-size: 61%;
     }
 
+    .secao-jogar-para-moblie {
+        visibility: visible;
+    }
+
     .campo-adicionar-letras  {
         position: absolute;
         top: 70%;
         left: calc(100% - 80%);
+        visibility: visible;
+    }
+
+    .btn-verificar-letra {
+        visibility: visible;
     }
 
     .contener-iniciar-adicionar {
@@ -59,7 +68,7 @@
         font-size: 10px;
         left: 50%;
         position: absolute;
-        top: 40%;
+        top: 38%;
         width: 100px;
     }
 
@@ -71,19 +80,18 @@
         width: 100px;
     }
 
+    .contener-novo-desitir {
+        display: flex;
+	    justify-content: space-evenly;
+    }
+
     .btn-novojogo {
         font-size: 10px;
         margin-right: 4em;
-        position: absolute;
-        right: 20px;
-        top: 300px;
     }
 
     .btn-desistir {
         font-size: 10px;
-        left: 60px;
-        position: absolute;
-        top: 300px;
     }
 
     .adicionar-letras-incorretas {
@@ -132,7 +140,19 @@
         background: url("../imagem/imagempaisagem.png");
         color: #ffffff;
     }
- 
+
+    .secao-jogar-para-moblie {
+        visibility: visible;
+    }
+
+    .campo-adicionar-letras  {
+        visibility: visible;
+    }
+
+    .btn-verificar-letra {
+        visibility: visible;
+    }
+
     .btn-iniciar {
         left: 50%;
         position: absolute;
@@ -186,6 +206,21 @@
         background-repeat: no-repeat;
         color: #ffffff;
     }
+
+    .secao-jogar-para-moblie {
+        visibility: visible;
+    }
+
+    .campo-adicionar-letras  {
+        position: absolute;
+        top: 70%;
+        left: calc(100% - 80%);
+        visibility: visible;
+    }
+
+    .btn-verificar-letra {
+        visibility: visible;
+    }
     
     .btn-iniciar {
        left: 50%;
@@ -223,5 +258,62 @@
         position: absolute;
         width: 60px;
     }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .contener-all {
+        background: url("../imagem/imagempaisagem.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: #ffffff;
+    }
+
+    .contener-imagem-canvas {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #canvas {
+        background: url("../imagem/forca.png") no-repeat;
+        background-position: bottom;
+        visibility: hidden;
+    }
+
+    .secao-jogar-para-moblie {
+        visibility: hidden;
+    }
+
+    .campo-adicionar-letras  {
+        visibility: hidden;
+    }
+
+    .btn-verificar-letra {
+        visibility: hidden;
+    }
+
+    .btn-iniciar {
+        left: 50%;
+        position: absolute;
+        top: 160px;
+    }
+
+    .btn-adicionar {
+        position: absolute;
+        top: 200px;
+        left: 47%;
+    }
+
+    .contener-novo-desitir {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .adicionar-letras-incorretas {
+        position: absolute;
+        right: 15%;
+    }
+
 
 }

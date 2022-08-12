@@ -18,24 +18,11 @@
 	visibility: hidden;
 }
 
-.contener-imagem-canvas {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-}
-
-#canvas {
-	background: url("../imagem/forca.png") no-repeat;
-	background-position: bottom;
-	visibility: hidden;
-}
-
 .tela {
 	background: transparent;
 }
 
 .secao-jogar-para-moblie {
-	visibility: hidden;
 	height: 8em;
 }
 
@@ -45,7 +32,6 @@
 	font-size: 10px;
 	width: 60%;
 	height: 8%;
-	visibility: hidden;
 }
 
 .campo-adicionar-letras::placeholder {
@@ -64,14 +50,6 @@
 	padding: 15px;
 	position: absolute;
 	top: 85%;
-	visibility: hidden;
-}
-
-.contener-iniciar-adicionar {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 3e;
-	text-align: center;
 }
 
 .btn-iniciar {
@@ -81,9 +59,6 @@
 	color: #ffffff;
 	font-size: 13px;
 	font-weight: bold;
-	left: 50%;
-	position: absolute;
-	top: 160px;
 	padding: 15px;
 }
 
@@ -97,11 +72,7 @@
 	border-radius: 15px;
 	color: #ffffff;
 	font-weight: bold;
-    left: 50%;
 	margin-top: 20px;
-    position: absolute;
-    top: 200px;
-	left: 47%;
     padding: 15px;
 }
 
@@ -111,8 +82,6 @@
 
 .contener-novo-desitir {
 	align-items: center;
-	display: flex;
-	justify-content: space-around;
 	margin-top: 4em;
 }
 
@@ -144,7 +113,6 @@
 	background: transparent;
 	color: #1b1717;
 	position: absolute;
-	right: 100px;
 	top: 200px;
 }
 
