@@ -22,6 +22,10 @@
 	background: transparent;
 }
 
+#canvas {
+	visibility: hidden;
+}
+
 .secao-jogar-para-moblie {
 	height: 8em;
 }

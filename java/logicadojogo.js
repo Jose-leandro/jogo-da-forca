@@ -305,7 +305,7 @@ function VerificarSerLetrasOuNumero(){
         
     var DiminuirOIfUmpouco = QuaclassName.some(QuaclassName => QuaclassName === classNameOfClickedElement)
     if(DiminuirOIfUmpouco){
-        Quapopup.style.display = "none";
+        QuartoPopup.style.display = "none";
       }
     });  
   }

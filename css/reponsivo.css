@@ -46,15 +46,12 @@
         visibility: visible;
     }
 
-    .campo-adicionar-letras  {
-        position: absolute;
-        top: 70%;
-        left: calc(100% - 80%);
-        visibility: visible;
+    .btn-verificar-letra {
+        visibility: hidden;
     }
 
-    .btn-verificar-letra {
-        visibility: visible;
+    .campo-adicionar-letras {
+        visibility: hidden;
     }
 
     .contener-iniciar-adicionar {
@@ -145,12 +142,12 @@
         visibility: visible;
     }
 
-    .campo-adicionar-letras  {
-        visibility: visible;
+    .campo-adicionar-letras {
+        visibility: hidden;
     }
 
     .btn-verificar-letra {
-        visibility: visible;
+        visibility: hidden;
     }
 
     .btn-iniciar {
@@ -215,11 +212,11 @@
         position: absolute;
         top: 70%;
         left: calc(100% - 80%);
-        visibility: visible;
+        visibility: hidden;
     }
 
     .btn-verificar-letra {
-        visibility: visible;
+        visibility: hidden;
     }
     
     .btn-iniciar {
@@ -261,7 +258,7 @@
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .contener-all {
         background: url("../imagem/imagempaisagem.png");
         background-repeat: no-repeat;
@@ -278,19 +275,18 @@
     #canvas {
         background: url("../imagem/forca.png") no-repeat;
         background-position: bottom;
-        visibility: hidden;
     }
 
     .secao-jogar-para-moblie {
-        visibility: hidden;
+        display: none;
     }
 
     .campo-adicionar-letras  {
-        visibility: hidden;
+        display: none;
     }
 
     .btn-verificar-letra {
-        visibility: hidden;
+        display: none;
     }
 
     .btn-iniciar {

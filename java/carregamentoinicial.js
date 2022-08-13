@@ -59,6 +59,12 @@ function CarregarOsRecusosDoJogo() {
   var Canvas = document.querySelector("#canvas");
   Canvas.style.visibility = "visible";
 
+  var campoAdicionarLetras = document.querySelector(".campo-adicionar-letras");
+  campoAdicionarLetras.style.visibility = "visible";
+
+  var btnVerificarLetra = document.querySelector(".btn-verificar-letra");
+  btnVerificarLetra.style.visibility = "visible";
+     
   DesenhaTracos();
   DetectarLetrasQuandoPressionada();
  }
