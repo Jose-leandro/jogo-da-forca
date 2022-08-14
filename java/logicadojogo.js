@@ -85,7 +85,13 @@ function VocePerdeu(){
  //tem como função deterctar tecla, transformar para string, ser conter na palavra selecionada vai ser preenchida , ser não conter vai ser adiconar como letras erradas
  function DetectarLetrasQuandoPressionada() {
   document.addEventListener("keypress", function(event){
-    const entrekeyCode = 13;
+
+    var keyCodeEnter = 13;
+        
+    const arryStringComAcentuacao = ["á", "â" , "à", "ã", "ç", "é", "è", "ê", "í", "î", "ì",
+     "ô", "õ", "ó", "ò", "ú", "ù", "û", "'", "!", ";", ":","¨", "#", "@","%", "$","&", "*",
+      "[", "{", "(", ")", " ", "-", "_", ",", ".", "~", "^", "<", ">", "`", "=", "+", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
     var NumeroDaTecla = event.keyCode;
     var NumeroDaTeclaTransformada = String.fromCharCode(NumeroDaTecla);
     NumeroDaTeclaTransformada.toUpperCase();
@@ -99,21 +105,25 @@ function VocePerdeu(){
           }  
         }
       }else{
-        if(NumeroDaTecla == entrekeyCode) {
+        if(keyCodeEnter == NumeroDaTecla) {
           return;
         }else {
-          SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(NumeroDaTeclaTransformada));
-  
-          var OndevaiSerAdicionadaoAsLetrasErradas = document.querySelector(".adicionar-letras-incorretas");
-          var TagParagrafor =  document.createElement("p");
-          TagParagrafor.classList.add("adicionar-letras-incorreta");
-                
-          OndevaiSerAdicionadaoAsLetrasErradas.appendChild(TagParagrafor);
-                                    
-          TagParagrafor.textContent = NumeroDaTeclaTransformada; 
+          if(!arryStringComAcentuacao.includes(NumeroDaTeclaTransformada)) {
+            SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(NumeroDaTeclaTransformada));
+    
+            var OndevaiSerAdicionadaoAsLetrasErradas = document.querySelector(".adicionar-letras-incorretas");
+            var TagParagrafor =  document.createElement("p");
+            TagParagrafor.classList.add("adicionar-letras-incorreta");
+                    
+            OndevaiSerAdicionadaoAsLetrasErradas.appendChild(TagParagrafor);
+                                        
+            TagParagrafor.textContent = NumeroDaTeclaTransformada; 
+          }else {
+            return;
+          }
         }
-      } 
-    }
+      }    
+    }       
   });
 }
 
@@ -123,7 +133,6 @@ function comoJogarNoMoblie() {
   var inputParaMoblie = document.querySelector(".campo-adicionar-letras");
   inputParaMoblie = inputParaMoblie.value;
   inputParaMoblie = inputParaMoblie.toUpperCase();
-  console.log(inputParaMoblie);
         
   verificarLetraParaMoblie(inputParaMoblie);
  }
@@ -131,6 +140,10 @@ function comoJogarNoMoblie() {
  
  //tem como função deterctar tecla, transformar para string, ser conter na palavra selecionada vai ser preenchida , ser não conter vai ser adiconar como letras erradas
  function verificarLetraParaMoblie(letraParaVerificar) {
+
+  const arryStringComAcentuacao = ["á", "â" , "à", "ã", "ç", "é", "è", "ê", "í", "î", "ì",
+     "ô", "õ", "ó", "ò", "ú", "ù", "û", "'", "!", ";", ":","¨", "#", "@","%", "$","&", "*",
+      "[", "{", "(", ")", "-", "_", ",", ".", "~", "^", "<", ">", "`", "=", "+", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   
     if(!ValidacaoDeLetrasCorretas(letraParaVerificar)){
       if(palavrasecreta.includes(letraParaVerificar)){
@@ -142,16 +155,19 @@ function comoJogarNoMoblie() {
           }  
         }
       }else{
-    
+        if(!arryStringComAcentuacao.includes(letraParaVerificar)) {
           SubritaiLetraincorretasPorErros(palavraincorreta.indexOf(letraParaVerificar));
   
           var OndevaiSerAdicionadaoAsLetrasErradas = document.querySelector(".adicionar-letras-incorretas");
           var TagParagrafor =  document.createElement("p");
           TagParagrafor.classList.add("adicionar-letras-incorreta");
-                
+                  
           OndevaiSerAdicionadaoAsLetrasErradas.appendChild(TagParagrafor);
-                                    
+                                      
           TagParagrafor.textContent = letraParaVerificar; 
+        }else {
+          return;
+        }
       } 
     }
 }
@@ -268,8 +284,8 @@ function VerificarSerLetrasOuNumero(){
   
   //esconder algumas coisas e tornar visivel outras , para adicionar novas plavras ao jogo
   function TornarVisivelParaAdicionar() {
-    var Textarea = document.querySelector(".textare");
-    Textarea.style.visibility = "visible";
+    var InputAdicionar = document.querySelector(".input-adicionar");
+    InputAdicionar.style.visibility = "visible";
     
     var Btndicionarpalavrasnovas = document.querySelector(".btn-adicionarpalavra-ao-jogo");
     Btndicionarpalavrasnovas.style.visibility = "visible";
@@ -289,9 +305,9 @@ function VerificarSerLetrasOuNumero(){
 
   //a lógica para adiconar a nova palavra ao arry de palavras para ser selecionadas
   function AdicionarNovaspalavras() {
-    var Textarea = document.querySelector(".textare");
-    Textarea = Textarea.value;
-    ContenhePalavrasSorteada.push(Textarea);
+    var InputAdicionar = document.querySelector(".input-adicionar");
+    InputAdicionar = InputAdicionar.value;
+    ContenhePalavrasSorteada.push(InputAdicionar);
   }
   
   //popup de adicionado com sucesso, a palavra nova
@@ -310,10 +326,10 @@ function VerificarSerLetrasOuNumero(){
     });  
   }
   
-  //limpa textare quando for adcionado a palvra ,limpar os traços é sortear nova palavra
-  function LimparTextareaEPincel() {
-  var Textarea = document.querySelector(".textare");
-    Textarea.value =" ";
+  //limpa o input quando for adcionado a palvra ,limpar os traços é sortear nova palavra
+  function LimparInputEPincel() {
+  var InputAdicionar = document.querySelector(".input-adicionar");
+    InputAdicionar.value =" ";
   
     pincel.clearRect(0, 0, 600, 400);
     DesenhaTracos(SorteiaPalavras());
@@ -321,8 +337,8 @@ function VerificarSerLetrasOuNumero(){
   
   //a logica do btn voltar escondendo alguns é mostrando outros para que possar voltar para o início para que possar iniciar o jogo
   function btnVoltar() {
-    var Textarea = document.querySelector(".textare");
-    Textarea.style.visibility = "hidden";
+    var InputAdicionar = document.querySelector(".input-adicionar");
+    InputAdicionar.style.visibility = "hidden";
   
     var BtnAdicionarPalavrasNovasNoJogo = document.querySelector(".btn-adicionarpalavra-ao-jogo");
     BtnAdicionarPalavrasNovasNoJogo.style.visibility = "hidden";

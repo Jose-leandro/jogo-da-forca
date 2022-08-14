@@ -36,10 +36,12 @@
 				</div>
 			</section>
 			<section class="secao-jogar-para-moblie">
-				<div>
-					<input class="campo-adicionar-letras" placeholder="Digite uma letra aqui">
-				</div>
-				<button class="btn-verificar-letra" onclick="comoJogarNoMoblie();">Verificar letra</button>
+				<form>
+					<div>
+					<input name="adiconarletras" type="text" class="campo-adicionar-letras" placeholder="Digite apenas uma letra aqui" required pattern="^[a-z]{1,1}$" title="Digite apenas uma letra">
+					<button class="btn-verificar-letra" type="button" onclick="comoJogarNoMoblie()">Verificar letra</button>
+					</div>
+				</form>
 			</section>
 			<section>
 				<div class="adicionar-letras-incorretas"></div>
@@ -99,14 +101,14 @@
 		</section>
 		<form>
 			<div class="contener-adicionar">
-				<div class="contener-textarea">
-					<textarea placeholder="Digite uma nova palavra para adicionar no jogo" class="textare" rows="3" cols="50" required ></textarea>
+				<div class="contener-input">
+					<input name = "adicionar" type="text" class="input-adicionar"  required placeholder="Digite uma nova palavra para adicionar no jogo" pattern="^(?!.*[0-9])(?!.*[ !@#$%^&*_=+-]).{3,12}$" title="não digite número ou caracteres especiais">
 				</div>
 			</div>
 			<div class="contener-bnts-voltar-adicionar">
-				<button class="btn-voltar" onclick="btnVoltar()">Voltar</button>
+				<button class="btn-voltar" type="button" onclick="btnVoltar()">Voltar</button>
 		
-				<button class="btn-adicionarpalavra-ao-jogo" onclick= "AdicionarNovaspalavras(), PopupPalvraAdicionada(), LimparTextareaEPincel()">Adicionar Palavra</button>
+				<button class="btn-adicionarpalavra-ao-jogo" type="button" onclick= "AdicionarNovaspalavras(), PopupPalvraAdicionada(), LimparInputEPincel()">Adicionar Palavra</button>
 			</div>
 		</form>
 		<section>

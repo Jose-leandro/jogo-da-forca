@@ -25,6 +25,11 @@
       event.preventDefault();
     });
 
+    var btnVerificarLetra = document.querySelector(".btn-verificar-letra");
+    btnVerificarLetra.addEventListener("click", function(event) {
+      event.preventDefault();
+    });
+
     var BtnDesistir = document.querySelector(".btn-desistir");
     BtnDesistir.addEventListener("click", function(event){
     event.preventDefault();
@@ -66,7 +71,7 @@ function CarregarOsRecusosDoJogo() {
   btnVerificarLetra.style.visibility = "visible";
      
   DesenhaTracos();
-  DetectarLetrasQuandoPressionada();
+  DetectarLetrasQuandoPressionada(); 
  }
   
  var Tela = document.querySelector("canvas");

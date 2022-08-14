@@ -141,15 +141,20 @@ form {
 	width: 100%;
 }
 
-.contener-textarea {
+.contener-input {
 	height: 6em;
 }
 
-.textare {
+.input-adicionar {
+	border: transparent;
+	border-radius: 5px;
+	height: 10%;
 	left: 500px;
+	opacity: 70%;
 	position: absolute;
 	top: 250px;
 	visibility: hidden;
+	width: 28%;
 }
 
 .contener-bnts-voltar-adicionar {
