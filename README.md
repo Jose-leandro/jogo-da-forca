@@ -20,7 +20,7 @@ O objetivo do jogo é adivinhar qual é a palavra secreta que foi escolhida alea
 * A cada letra errada você perderá a as chances de acertar a palavra secreta
 * Ser a letra na qual você tentou adivinhar for errada, será desenhado uma parte do desenho do boneco ou boneca
 * Ser o desenho for completo através das suas tentativas que foram erradas, que pena mas você acaba de perder o jogo
-* Ser você conseguir acertar todas as letras da palvra secreta, parabéns você acabar de vencer o jogo
+* Ser você conseguir acertar todas as letras da palavra secreta, parabéns você acabar de vencer o jogo
 
 > ### A imagem a seguir
 Ela descrever o primeiro contato que você terá com o projeto.
